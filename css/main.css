@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary_font: "PT Sans Caption", sans-serif;
+    --secondary_font: "Pacifico", cursive;
+    --third_font: "Righteous", sans-serif;
+    --primary_color: #F7ECDE;
+    --secondary_color: #352E28;
+    --third_color: #D1512D;
+}
+
+body {
+    font-family: var(--primary_font);
+    background-color: var(--primary_color) !important;
+}
+
+.bookmark-body {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+}
+
+.h1-holder {
+    color: var(--secondary_color);
+    font-size: 50px !important;
+    font-family: var(--secondary_font);
+    text-align: center;
+    width: fit-content;
+    z-index: 1;
+}
+
+.h1-holder::before {
+    content: '';
+    background-color: #FEC260;
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.h1-holder:hover::before {
+    height: 70%;
+}
+
+h2 {
+    width: fit-content;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    font-family: var(--third_font);
+    font-size: 25px !important;
+    font-weight: 500;
+    text-align: center;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem #fec26055 !important;
+    border-color: #d99c39 !important;
+}
+
+.bookmark-body button {
+    background-color: var(--third_color) !important;
+    transition: 0.3s all ease;
+}
+
+.bookmark-body button:hover {
+    background-color: #c33710 !important;
+}
+
+.edit-modalName{
+    font-size: 21px;
+    font-family: var(--third_font);
+    font-weight: bolder;
+    color: var(--secondary_color);
+}
+
+.span-edit{
+    color: var(--secondary_color);
+    font-size: 18px;
+}
+
+.circle1{
+    color: #ec633d;
+}
+
+.circle2{
+    color: #FEC260;
+}
+
+.circle3{
+    color: #3ca55c;
+}

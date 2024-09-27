@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="container py-4 mt-5">
+        <h1 class="h1-holder position-relative mx-auto">Bookmarker</h1>
+        <div class="bookmark-body py-4 mt-5 w-100">
+            <h2 class="mx-auto">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="site-name py-4 mt-3">
+                <label for="sitename" class="pb-2 fw-bold">
+                    <i class="fa-solid fa-book-bookmark"></i>    
+                    Site Name
+                </label>
+                <input type="text" oninput="validationName() " class="form-control" id="sitename" placeholder="Bookmark Name">
+            </div>
+            <div class="site-url mb-4">
+                <label for="siteurl" class="pb-2 fw-bold">
+                    <i class="fa-solid fa-link"></i>   
+                    Site URL
+                </label>
+                <input type="text" oninput="validationSite()"  class="form-control" id="siteurl" placeholder="Website URL">
+            </div>
+            <button onclick="addWebsite()" id="addBtn" class="btn px-5 py-2 text-white fw-medium mx-auto d-block">Submit</button>
+            <button onclick="updateBookmark()" id="UpdateBtn" class="btn px-5 py-2 text-white fw-medium mx-auto d-block d-none">Update</button>
+        </div>
+        <table class="table bg-light mt-4 text-center">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableContent">
+                
+            </tbody>
+        </table>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content py-3 px-2">
+                    <div class="modal-header border-bottom-0">
+                        <div class="modal-title fs-5 icon d-center d-flex justify-content-between" id="exampleModalLabel">
+                            <div><i class="fa-solid fa-circle circle1"></i></div>
+                            <div><i class="fa-solid fa-circle ms-2 circle2"></i></div>
+                            <div><i class="fa-solid fa-circle ms-2 circle3"></i></div>
+                        </div>
+                        <button type="button" class="btn-close opacity-100" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="edit-modalName">Site Name or Url is not valid, Please follow the rules below :</p>
+
+                        <div class="px-2">
+                            <div class="mb-3"><i class="fa-regular fa-circle-right me-2 fs-5 text-danger"></i><span class="span-edit">Site name must
+                                    contain at least 3 characters</span></div>
+                            <div class="mb-3"><i class="fa-regular fa-circle-right me-2 fs-5 text-danger"></i><span class="span-edit">Site URL must be a valid
+                                    one</span></div>
+                            <div><i class="fa-regular fa-circle-right fs-5 me-2 text-danger"></i><span class="span-edit">Site URL must not contain
+                                    ( https://www. )</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
