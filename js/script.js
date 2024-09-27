@@ -34,9 +34,9 @@ function displayWebsite(List){
         marks += `<tr>
                     <td>${i+1}</td>
                     <td class="text-capitalize">${List[i].name}</td>
-                    <td><a href="${List[i].url}"><button class="btn btn-primary px-3"><i class="fa-solid fa-eye"></i> Visit</button></a></td>
-                    <td><button onclick="getDataOnClick(${i})" class="btn btn-warning px-3"><i class="fa-solid fa-pen-to-square"></i> Update</button></td>
-                    <td><button onclick="deleteBookmark(${i})" class="btn btn-danger px-3"><i class="fa-solid fa-trash-can"></i> Delete</button></td>
+                    <td><a href="${List[i].url}"><button class="btn btn-primary my-2"><i class="fa-solid fa-eye"></i> Visit</button></a></td>
+                    <td><button onclick="getDataOnClick(${i})" class="btn btn-warning my-2"><i class="fa-solid fa-pen-to-square"></i> Update</button></td>
+                    <td><button onclick="deleteBookmark(${i})" class="btn btn-danger my-2"><i class="fa-solid fa-trash-can"></i> Delete</button></td>
                 </tr>`
     }
 
@@ -75,7 +75,7 @@ function updateBookmark(){
     updateInputValue()
 }
 
-function validationName() {
+function validationName() { 
     var regex = /^\w{3,}$/;
     if (regex.test(siteName.value)) {
         siteName.classList.add('is-valid')

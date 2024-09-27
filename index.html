@@ -21,7 +21,7 @@
 <body>
     <section class="home">
 
-        <div class="container py-4 mt-5">
+        <div class="container h-100 w-100 py-4 mt-5">
             <h1 class="h1-holder position-relative mx-auto">Bookmarker</h1>
             <div class="bookmark-body py-4 mt-5 w-100">
                 <h2 class="mx-auto">
@@ -50,20 +50,23 @@
                 <button onclick="updateBookmark()" id="UpdateBtn"
                     class="btn px-5 py-2 text-white fw-medium mx-auto d-block d-none">Update</button>
             </div>
-            <table class="table bg-light mt-4 text-center">
-                <thead>
-                    <tr>
-                        <th>Index</th>
-                        <th>Website Name</th>
-                        <th>Visit</th>
-                        <th>Update</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody id="tableContent">
+            <div class="container-md">
+                <table class="table-responsive-lg w-100 bg-light mt-4 mx-auto text-center">
+                    <thead>
+                        <tr>
+                            <th >Index</th>
+                            <th >Website Name</th>
+                            <th >Visit</th>
+                            <th >Update</th>
+                            <th >Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableContent" >
+    
+                    </tbody>
+                </table>
+            </div>
 
-                </tbody>
-            </table>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -90,7 +93,7 @@
                                         class="span-edit">Site URL must be a valid
                                         one</span></div>
                                 <div><i class="fa-regular fa-circle-right fs-5 me-2 text-danger"></i><span
-                                        class="span-edit">Site URL must not contain
+                                        class="span-edit">Site URL must contain
                                         ( https://www. )</span></div>
                             </div>
                         </div>
