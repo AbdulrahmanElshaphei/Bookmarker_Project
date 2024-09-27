@@ -1,0 +1,12 @@
+
+@media (max-width:640px) {
+    .home {
+        min-height: calc(100vh - 3.2rem);
+    }
+    .span-edit{
+        font-size: 14px;
+    }
+    .edit-modalName{
+        font-size: 18px;
+    }
+}
